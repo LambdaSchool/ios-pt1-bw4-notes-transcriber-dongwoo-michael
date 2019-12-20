@@ -100,7 +100,7 @@ class TextViewViewController: UIViewController, SFSpeechRecognizerDelegate {
             self.recognitionTask?.cancel()
             //add styleSheet here
             if self.textView.text != "Start your speech" {
-
+                shareText()
             }
         } else {
             do {
@@ -112,7 +112,44 @@ class TextViewViewController: UIViewController, SFSpeechRecognizerDelegate {
         }
     }
     
+    
+    //CRUD methods and updateViews
+    var noteController: NoteController?
+    
+    var note: Note? {
+        didSet {
+            self.updateViews()
+        }
+    }
+    
+    private func shareText() {
+        guard let noteInput = self.textView.text else {
+            print("no text found")
+            return
+        }
+        let vc = UIActivityViewController(activityItems: [noteInput], applicationActivities: [])
+        self.present(vc, animated: true, completion: nil)
+    }
+    
+    
     @IBAction func saveButtonTapped(_ sender: Any) {
-        
+        if let noteController = self.noteController,
+            let note = self.note {
+            if let noteText = self.textView.text {
+                noteController.updateNote(for: note, noteText: noteText)
+            }
+        } else {
+            guard let noteInput = self.textView.text else {return}
+            noteController?.createNote(for: noteInput)
+        }
+        navigationController?.popViewController(animated: true)
+    }
+    
+    private func updateViews() {
+        if let note = self.note {
+            self.textView?.text = note.noteText
+        } else {
+            print("no data being passed")
+        }
     }
 }
