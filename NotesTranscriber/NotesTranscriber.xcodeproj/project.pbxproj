@@ -15,6 +15,7 @@
 		0BDF2D0A23AC7C6A00835A92 /* NotesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BDF2D0923AC7C6A00835A92 /* NotesTableViewController.swift */; };
 		0BDF2D0E23AC7CDB00835A92 /* TextViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BDF2D0D23AC7CDB00835A92 /* TextViewViewController.swift */; };
 		0BDF2D1223AC7F6B00835A92 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BDF2D1123AC7F6B00835A92 /* Note.swift */; };
+		0BDF2D1423AC7FD500835A92 /* NoteController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BDF2D1323AC7FD500835A92 /* NoteController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		0BDF2D0923AC7C6A00835A92 /* NotesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesTableViewController.swift; sourceTree = "<group>"; };
 		0BDF2D0D23AC7CDB00835A92 /* TextViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewViewController.swift; sourceTree = "<group>"; };
 		0BDF2D1123AC7F6B00835A92 /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
+		0BDF2D1323AC7FD500835A92 /* NoteController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 			children = (
 				0B1C31A423AB16D300AC1893 /* Main.storyboard */,
 				0BDF2D1123AC7F6B00835A92 /* Note.swift */,
+				0BDF2D1323AC7FD500835A92 /* NoteController.swift */,
 				0BDF2D0923AC7C6A00835A92 /* NotesTableViewController.swift */,
 				0BDF2D0D23AC7CDB00835A92 /* TextViewViewController.swift */,
 				0BDF2D0F23AC7D0B00835A92 /* App Lifecycle */,
@@ -161,6 +164,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0BDF2D1223AC7F6B00835A92 /* Note.swift in Sources */,
+				0BDF2D1423AC7FD500835A92 /* NoteController.swift in Sources */,
 				0BDF2D0A23AC7C6A00835A92 /* NotesTableViewController.swift in Sources */,
 				0B1C319F23AB16D300AC1893 /* AppDelegate.swift in Sources */,
 				0BDF2D0E23AC7CDB00835A92 /* TextViewViewController.swift in Sources */,
