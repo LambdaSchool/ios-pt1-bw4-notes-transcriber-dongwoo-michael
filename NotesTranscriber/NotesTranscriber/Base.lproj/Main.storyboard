@@ -52,7 +52,7 @@
                     <navigationItem key="navigationItem" id="JKq-1h-8Ly">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="GLD-LE-FRd">
                             <connections>
-                                <segue destination="zOA-bk-an0" kind="show" identifier="ToAddText" id="dqP-vQ-6rW"/>
+                                <segue destination="zOA-bk-an0" kind="show" identifier="ToAddNote" id="dqP-vQ-6rW"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
