@@ -16,7 +16,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="7dc-B8-dXW" detailTextLabel="4yF-1f-u2c" rowHeight="79" style="IBUITableViewCellStyleSubtitle" id="4tC-XE-LOw">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="7dc-B8-dXW" detailTextLabel="4yF-1f-u2c" rowHeight="79" style="IBUITableViewCellStyleSubtitle" id="4tC-XE-LOw">
                                 <rect key="frame" x="0.0" y="28" width="414" height="79"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4tC-XE-LOw" id="Asu-a4-SRY">
@@ -101,8 +101,7 @@
                                 </constraints>
                                 <state key="normal" image="Record"/>
                                 <connections>
-                                    <action selector="recordButtonTapped" destination="zOA-bk-an0" eventType="touchUpInside" id="PTZ-y0-Xh2"/>
-                                    <action selector="recordButtonTapped:" destination="zOA-bk-an0" eventType="touchUpInside" id="ywF-W5-cdQ"/>
+                                    <action selector="recordButtonTapped:" destination="zOA-bk-an0" eventType="touchUpInside" id="8y2-oC-vNb"/>
                                 </connections>
                             </button>
                         </subviews>

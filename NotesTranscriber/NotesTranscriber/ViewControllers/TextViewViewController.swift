@@ -28,6 +28,7 @@ class TextViewViewController: UIViewController, SFSpeechRecognizerDelegate {
         super.viewDidLoad()
         //add authorization here
         speechRecognizer.delegate = self
+        self.updateViews()
     }
     
 
