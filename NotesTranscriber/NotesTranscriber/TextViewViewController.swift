@@ -7,9 +7,14 @@
 //
 
 import UIKit
+import Speech
 
-class TextViewViewController: UIViewController {
+class TextViewViewController: UIViewController, SFSpeechRecognizerDelegate {
 
+    private let speechRecognizer = SFSpeechRecognizer(locale: Locale(identifier: "en-US"))!
+    
+    
+    
     
     @IBOutlet weak var textView: UITextView!
     
@@ -17,7 +22,7 @@ class TextViewViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        speechRecognizer.delegate = self
     }
     
 
