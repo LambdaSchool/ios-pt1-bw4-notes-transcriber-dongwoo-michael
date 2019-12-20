@@ -58,13 +58,14 @@ class NotesTableViewController: UITableViewController {
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "AddText" {
+        if segue.identifier == "ToAddNote" {
             guard let destVC = segue.destination as? TextViewViewController else {return}
-        
-        } else if segue.identifier == "UpdateText" {
+            destVC.noteController = self.noteController
+        } else if segue.identifier == "ToShowNote" {
             guard let destVC = segue.destination as? TextViewViewController,
                 let selectedRow = self.tableView.indexPathForSelectedRow else {return}
-            
+            destVC.noteController = self.noteController
+            destVC.note = self.noteController.notes[selectedRow.row]
         }
     }
 }
