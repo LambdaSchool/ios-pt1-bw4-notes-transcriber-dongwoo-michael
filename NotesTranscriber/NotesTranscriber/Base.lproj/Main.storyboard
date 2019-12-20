@@ -102,6 +102,7 @@
                                 <state key="normal" image="Record"/>
                                 <connections>
                                     <action selector="recordButtonTapped" destination="zOA-bk-an0" eventType="touchUpInside" id="PTZ-y0-Xh2"/>
+                                    <action selector="recordButtonTapped:" destination="zOA-bk-an0" eventType="touchUpInside" id="ywF-W5-cdQ"/>
                                 </connections>
                             </button>
                         </subviews>
