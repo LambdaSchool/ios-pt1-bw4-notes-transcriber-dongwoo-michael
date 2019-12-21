@@ -93,6 +93,8 @@ class TextViewViewController: UIViewController, SFSpeechRecognizerDelegate {
         self.textView.text = "Start your speech"
     }
     
+    
+    
     @IBAction func recordButtonTapped(_ sender: Any) {
         if audioEngine.isRunning {
             audioEngine.stop()
