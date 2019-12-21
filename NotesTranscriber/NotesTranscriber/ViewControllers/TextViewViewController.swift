@@ -78,7 +78,7 @@ class TextViewViewController: UIViewController, SFSpeechRecognizerDelegate {
                 self.recordButton.isEnabled = true
                 //when there is no speech to convert into text, this will be called and the button will be changed
                 self.recordButton.setImage(UIImage(named: "Record"), for: [])
-                print("nothing to do speech-to-text here\(error)")
+                print("nothing to do speech-to-text here")
             } else {
                 guard let result = result else {return}
                 // Update the text view with the results.
