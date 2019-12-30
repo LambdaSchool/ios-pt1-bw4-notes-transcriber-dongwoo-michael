@@ -8,6 +8,7 @@
 
 import UIKit
 import Speech
+import AudioToolbox
 
 class TextViewViewController: UIViewController, SFSpeechRecognizerDelegate {
 
@@ -109,6 +110,8 @@ class TextViewViewController: UIViewController, SFSpeechRecognizerDelegate {
             do {
                 try startRecording()
                 recordButton.setImage(UIImage(named: "Stop"), for: .normal)
+                AudioServicesPlayAlertSound(kSystemSoundID_Vibrate)
+                print("Started to record")
             } catch {
                 recordButton.setTitle("Recording Not Available", for: [])
             }

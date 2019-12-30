@@ -99,7 +99,9 @@
                                     <constraint firstAttribute="width" constant="50" id="OpW-Xf-QL7"/>
                                     <constraint firstAttribute="width" secondItem="s0f-k3-PM7" secondAttribute="height" multiplier="1:1" id="USf-Xb-Wvz"/>
                                 </constraints>
-                                <state key="normal" image="Record"/>
+                                <state key="normal" image="Record">
+                                    <color key="titleColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="recordButtonTapped:" destination="zOA-bk-an0" eventType="touchUpInside" id="8y2-oC-vNb"/>
                                 </connections>
