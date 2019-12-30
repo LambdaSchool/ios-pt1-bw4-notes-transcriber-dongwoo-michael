@@ -127,6 +127,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="recordButton" destination="s0f-k3-PM7" id="jxz-Yb-OjT"/>
+                        <outlet property="saveButtonProperties" destination="TyS-hI-McG" id="j1M-Nd-ald"/>
                         <outlet property="textView" destination="oRw-bL-Fkh" id="k4L-ea-YM7"/>
                     </connections>
                 </viewController>

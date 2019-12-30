@@ -26,14 +26,16 @@ class TextViewViewController: UIViewController, SFSpeechRecognizerDelegate {
     
     @IBOutlet weak var recordButton: UIButton!
     
+    @IBOutlet weak var saveButtonProperties: UIBarButtonItem!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         //add authorization here
         speechRecognizer.delegate = self
+        saveButtonProperties.isEnabled = false
         self.updateViews()
     }
-    
-    
+
     private func startRecording() throws {
         
         // Cancel the previous task if it's running.
@@ -95,8 +97,6 @@ class TextViewViewController: UIViewController, SFSpeechRecognizerDelegate {
         self.textView.text = "Start your speech"
     }
     
-    
-    
     @IBAction func recordButtonTapped(_ sender: Any) {
         if audioEngine.isRunning {
             audioEngine.stop()
@@ -105,8 +105,10 @@ class TextViewViewController: UIViewController, SFSpeechRecognizerDelegate {
             self.recognitionTask?.cancel()
             //add styleSheet here
             if self.textView.text != "Start your speech" {
+                saveButtonProperties.isEnabled = true
                 shareText()
             }
+            print("this is where it stopped")
         } else {
             do {
                 try startRecording()
