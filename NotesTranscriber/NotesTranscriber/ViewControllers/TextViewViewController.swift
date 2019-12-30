@@ -12,7 +12,7 @@ import AudioToolbox
 import AVFoundation
 
 class TextViewViewController: UIViewController, SFSpeechRecognizerDelegate {
-
+    
     private let speechRecognizer = SFSpeechRecognizer(locale: Locale(identifier: "en-US"))!
     
     private var recognitionRequest: SFSpeechAudioBufferRecognitionRequest?
@@ -20,7 +20,7 @@ class TextViewViewController: UIViewController, SFSpeechRecognizerDelegate {
     private var recognitionTask: SFSpeechRecognitionTask?
     
     private let audioEngine = AVAudioEngine()
-
+    
     
     @IBOutlet weak var textView: UITextView!
     
@@ -33,7 +33,7 @@ class TextViewViewController: UIViewController, SFSpeechRecognizerDelegate {
         self.updateViews()
     }
     
-
+    
     private func startRecording() throws {
         
         // Cancel the previous task if it's running.
@@ -112,7 +112,7 @@ class TextViewViewController: UIViewController, SFSpeechRecognizerDelegate {
                 try startRecording()
                 recordButton.setImage(UIImage(named: "Stop"), for: .normal)
                 AudioServicesPlaySystemSound(kSystemSoundID_Vibrate)
-//                shakeRecordButton()
+                self.animateView(recordButton)
                 print("Started to record")
             } catch {
                 recordButton.setTitle("Recording Not Available", for: [])
@@ -121,10 +121,15 @@ class TextViewViewController: UIViewController, SFSpeechRecognizerDelegate {
     }
     
     //ANIMATION ON THE BUTTON
-//    func shakeRecordButton(){
-//        UIView.animate(withDuration: 1.5, delay: <#T##TimeInterval#>, options: <#T##UIView.AnimationOptions#>, animations: <#T##() -> Void#>, completion: <#T##((Bool) -> Void)?##((Bool) -> Void)?##(Bool) -> Void#>)
-//    }
-    
+    private func animateView(_ viewToAnimate: UIView){
+        UIView.animate(withDuration: 0.15, delay: 0, usingSpringWithDamping: 0.6, initialSpringVelocity: 0.5, options: [.curveEaseIn], animations: {
+            viewToAnimate.transform = CGAffineTransform(scaleX: 0.90, y: 0.90)
+        }) {(_) in
+            UIView.animate(withDuration: 0.15, delay: 0, usingSpringWithDamping: 0.9, initialSpringVelocity: 0.9, options: [.curveEaseIn], animations: {
+                viewToAnimate.transform = CGAffineTransform(scaleX: 1, y: 1)
+            }, completion: nil)
+        }
+    }
     
     //CRUD methods and updateViews
     var noteController: NoteController?
