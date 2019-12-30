@@ -9,6 +9,7 @@
 import UIKit
 import Speech
 import AudioToolbox
+import AVFoundation
 
 class TextViewViewController: UIViewController, SFSpeechRecognizerDelegate {
 
@@ -110,13 +111,19 @@ class TextViewViewController: UIViewController, SFSpeechRecognizerDelegate {
             do {
                 try startRecording()
                 recordButton.setImage(UIImage(named: "Stop"), for: .normal)
-                AudioServicesPlayAlertSound(kSystemSoundID_Vibrate)
+                AudioServicesPlaySystemSound(kSystemSoundID_Vibrate)
+//                shakeRecordButton()
                 print("Started to record")
             } catch {
                 recordButton.setTitle("Recording Not Available", for: [])
             }
         }
     }
+    
+    //ANIMATION ON THE BUTTON
+//    func shakeRecordButton(){
+//        UIView.animate(withDuration: 1.5, delay: <#T##TimeInterval#>, options: <#T##UIView.AnimationOptions#>, animations: <#T##() -> Void#>, completion: <#T##((Bool) -> Void)?##((Bool) -> Void)?##(Bool) -> Void#>)
+//    }
     
     
     //CRUD methods and updateViews
