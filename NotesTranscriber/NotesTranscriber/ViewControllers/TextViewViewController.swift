@@ -166,8 +166,9 @@ class TextViewViewController: UIViewController, SFSpeechRecognizerDelegate {
     }
     
     private func updateViews() {
-        if let note = self.note {
+        if let note = self.note, isViewLoaded {
             self.textView?.text = note.noteText
+            recordButton.isHidden = true
         } else {
             print("no data being passed")
         }
