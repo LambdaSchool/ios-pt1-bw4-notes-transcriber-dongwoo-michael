@@ -29,18 +29,9 @@ class NotesTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! NoteTableViewCell
         let note = self.noteController.notes[indexPath.row]
-        cell.textLabel?.text = note.noteText
-        
-        //Date Formatter
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "MM/dd/yyyy HH:mm:ss"
-        let dateFromNote = note.timestamp
-        let createdDate = dateFormatter.string(from: dateFromNote!)
-        dateFormatter.timeZone = NSTimeZone.local
-        
-        cell.detailTextLabel?.text = createdDate
+        cell.note = note
         return cell
     }
 
