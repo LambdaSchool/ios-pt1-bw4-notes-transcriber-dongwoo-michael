@@ -64,7 +64,7 @@ class TextViewViewController: UIViewController, SFSpeechRecognizerDelegate {
         
         // Keep speech recognition data on device
         if #available(iOS 13, *) {
-            recognitionRequest.requiresOnDeviceRecognition = false
+            recognitionRequest.requiresOnDeviceRecognition = true
         }
         
         // Create a recognition task for the speech recognition session.
