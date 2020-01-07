@@ -9,7 +9,7 @@
 import UIKit
 
 class NoteTableViewCell: UITableViewCell {
-
+    
     @IBOutlet weak var noteLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var shareButton: UIButton!
@@ -22,7 +22,7 @@ class NoteTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        self.shareButton.imageView?.tintColor = .systemTeal
+        self.shareButton.setShadowAndColor()
     }
     
     var delegate: NoteTableViewCellDelegate?
@@ -67,5 +67,13 @@ extension UIButton {
         shake.toValue = toValue
         
         layer.add(shake, forKey: nil)
+    }
+    
+    func setShadowAndColor() {
+        layer.shadowOpacity = 1.0
+        layer.shadowOffset = CGSize.zero
+        layer.shadowColor = UIColor.darkGray.cgColor
+        layer.cornerRadius = 10
+        imageView?.tintColor = .systemBlue
     }
 }
