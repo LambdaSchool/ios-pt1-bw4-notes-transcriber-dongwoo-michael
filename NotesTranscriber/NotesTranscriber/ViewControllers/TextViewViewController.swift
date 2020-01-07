@@ -108,14 +108,12 @@ class TextViewViewController: UIViewController, SFSpeechRecognizerDelegate {
                 saveButtonProperties.isEnabled = true
                 shareText()
             }
-            print("this is where it stopped")
         } else {
             do {
                 try startRecording()
                 recordButton.setImage(UIImage(named: "Stop"), for: .normal)
                 AudioServicesPlaySystemSound(kSystemSoundID_Vibrate)
                 self.animateView(recordButton)
-                print("Started to record")
             } catch {
                 recordButton.setTitle("Recording Not Available", for: [])
             }
