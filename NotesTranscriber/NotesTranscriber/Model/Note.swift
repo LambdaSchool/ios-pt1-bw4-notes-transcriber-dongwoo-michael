@@ -8,7 +8,7 @@
 
 import UIKit
 
-struct Note: Equatable {
+struct Note: Equatable, Codable {
     var noteText: String
     let timestamp: Date?
     
