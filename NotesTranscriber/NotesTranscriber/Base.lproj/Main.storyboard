@@ -23,15 +23,8 @@
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="66"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YOH-hg-7uU">
-                                            <rect key="frame" x="270" y="20" width="40" height="26"/>
-                                            <state key="normal" title="Share"/>
-                                            <connections>
-                                                <action selector="shareButtonTapped:" destination="4tC-XE-LOw" eventType="touchUpInside" id="EXf-pU-Jd7"/>
-                                            </connections>
-                                        </button>
-                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Aw6-ay-eyh">
-                                            <rect key="frame" x="10" y="10" width="200" height="46"/>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="Aw6-ay-eyh">
+                                            <rect key="frame" x="20" y="10" width="200" height="46"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3pJ-XO-lVs">
                                                     <rect key="frame" x="0.0" y="0.0" width="200" height="20.5"/>
@@ -40,7 +33,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="29Z-a6-bR9">
-                                                    <rect key="frame" x="0.0" y="28.5" width="200" height="17.5"/>
+                                                    <rect key="frame" x="0.0" y="26.5" width="200" height="19.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -56,14 +49,24 @@
                                                 <constraint firstItem="29Z-a6-bR9" firstAttribute="leading" secondItem="Aw6-ay-eyh" secondAttribute="leading" id="uBa-iP-Tc0"/>
                                             </constraints>
                                         </stackView>
+                                        <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YOH-hg-7uU">
+                                            <rect key="frame" x="270" y="15" width="30" height="36"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="30" id="kOX-ra-tha"/>
+                                            </constraints>
+                                            <state key="normal" title="Share" image="shareButton"/>
+                                            <connections>
+                                                <action selector="shareButtonTapped:" destination="4tC-XE-LOw" eventType="touchUpInside" id="EXf-pU-Jd7"/>
+                                            </connections>
+                                        </button>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="Aw6-ay-eyh" firstAttribute="top" secondItem="Asu-a4-SRY" secondAttribute="top" constant="10" id="1en-Nj-ZRa"/>
-                                        <constraint firstItem="YOH-hg-7uU" firstAttribute="top" secondItem="Asu-a4-SRY" secondAttribute="top" constant="20" id="2Y6-1P-gRj"/>
+                                        <constraint firstItem="YOH-hg-7uU" firstAttribute="top" secondItem="Asu-a4-SRY" secondAttribute="top" constant="15" id="ALC-B9-6Vc"/>
+                                        <constraint firstAttribute="bottom" secondItem="YOH-hg-7uU" secondAttribute="bottom" constant="15" id="F7g-kk-iNs"/>
                                         <constraint firstAttribute="bottom" secondItem="Aw6-ay-eyh" secondAttribute="bottom" constant="10" id="LRV-v8-b0g"/>
-                                        <constraint firstAttribute="trailing" secondItem="YOH-hg-7uU" secondAttribute="trailing" constant="10" id="O1F-Qi-SCt"/>
-                                        <constraint firstItem="Aw6-ay-eyh" firstAttribute="leading" secondItem="Asu-a4-SRY" secondAttribute="leading" constant="10" id="cOr-QA-Xxp"/>
-                                        <constraint firstAttribute="bottom" secondItem="YOH-hg-7uU" secondAttribute="bottom" constant="20" id="oNl-nu-9NH"/>
+                                        <constraint firstItem="Aw6-ay-eyh" firstAttribute="leading" secondItem="Asu-a4-SRY" secondAttribute="leading" constant="20" id="cOr-QA-Xxp"/>
+                                        <constraint firstAttribute="trailing" secondItem="YOH-hg-7uU" secondAttribute="trailing" constant="20" id="ild-RV-T0C"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
@@ -167,6 +170,7 @@
     </scenes>
     <resources>
         <image name="Record" width="116" height="116"/>
+        <image name="shareButton" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="0n9-Hd-J0D"/>
