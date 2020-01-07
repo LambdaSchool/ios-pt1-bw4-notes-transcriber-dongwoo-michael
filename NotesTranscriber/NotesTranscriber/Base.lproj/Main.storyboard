@@ -52,6 +52,7 @@
                                         <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YOH-hg-7uU">
                                             <rect key="frame" x="270" y="15" width="30" height="36"/>
                                             <constraints>
+                                                <constraint firstAttribute="height" constant="36" id="fz2-sS-ASY"/>
                                                 <constraint firstAttribute="width" constant="30" id="kOX-ra-tha"/>
                                             </constraints>
                                             <state key="normal" title="Share" image="shareButton"/>
@@ -72,6 +73,7 @@
                                 <connections>
                                     <outlet property="dateLabel" destination="29Z-a6-bR9" id="qft-OT-dx2"/>
                                     <outlet property="noteLabel" destination="3pJ-XO-lVs" id="Kgq-TA-xg7"/>
+                                    <outlet property="shareButton" destination="YOH-hg-7uU" id="5VX-CY-YTp"/>
                                     <segue destination="zOA-bk-an0" kind="show" identifier="ToShowNote" id="0n9-Hd-J0D"/>
                                 </connections>
                             </tableViewCell>
@@ -99,7 +101,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="26T-Rv-mIu" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="6Fe-YI-ASo">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
