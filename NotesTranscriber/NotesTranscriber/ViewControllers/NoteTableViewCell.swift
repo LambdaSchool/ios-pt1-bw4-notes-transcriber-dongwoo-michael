@@ -22,12 +22,10 @@ class NoteTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-
+        self.shareButton.imageView?.tintColor = .systemTeal
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-    }
+    
+    var delegate: NoteTableViewCellDelegate?
     
     private func updateViews() {
         
@@ -46,6 +44,7 @@ class NoteTableViewCell: UITableViewCell {
     
     @IBAction func shareButtonTapped(_ sender: Any) {
         self.shareButton.shake()
+        self.delegate?.showActivityView(for: self)
     }
     
 }
