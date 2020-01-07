@@ -12,6 +12,7 @@
 		0B1C31A623AB16D300AC1893 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B1C31A423AB16D300AC1893 /* Main.storyboard */; };
 		0B1C31A823AB16D600AC1893 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B1C31A723AB16D600AC1893 /* Assets.xcassets */; };
 		0B1C31AB23AB16D600AC1893 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B1C31A923AB16D600AC1893 /* LaunchScreen.storyboard */; };
+		0BCBF54823C45C9400F96069 /* NoteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCBF54723C45C9400F96069 /* NoteTableViewCell.swift */; };
 		0BDF2D0A23AC7C6A00835A92 /* NotesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BDF2D0923AC7C6A00835A92 /* NotesTableViewController.swift */; };
 		0BDF2D0E23AC7CDB00835A92 /* TextViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BDF2D0D23AC7CDB00835A92 /* TextViewViewController.swift */; };
 		0BDF2D1223AC7F6B00835A92 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BDF2D1123AC7F6B00835A92 /* Note.swift */; };
@@ -26,6 +27,7 @@
 		0B1C31A723AB16D600AC1893 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0B1C31AA23AB16D600AC1893 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0B1C31AC23AB16D600AC1893 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0BCBF54723C45C9400F96069 /* NoteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteTableViewCell.swift; sourceTree = "<group>"; };
 		0BDF2D0923AC7C6A00835A92 /* NotesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesTableViewController.swift; sourceTree = "<group>"; };
 		0BDF2D0D23AC7CDB00835A92 /* TextViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewViewController.swift; sourceTree = "<group>"; };
 		0BDF2D1123AC7F6B00835A92 /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
@@ -104,6 +106,7 @@
 			children = (
 				0BDF2D0923AC7C6A00835A92 /* NotesTableViewController.swift */,
 				0BDF2D0D23AC7CDB00835A92 /* TextViewViewController.swift */,
+				0BCBF54723C45C9400F96069 /* NoteTableViewCell.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -192,6 +195,7 @@
 				0BDF2D0A23AC7C6A00835A92 /* NotesTableViewController.swift in Sources */,
 				0B1C319F23AB16D300AC1893 /* AppDelegate.swift in Sources */,
 				0BDF2D0E23AC7CDB00835A92 /* TextViewViewController.swift in Sources */,
+				0BCBF54823C45C9400F96069 /* NoteTableViewCell.swift in Sources */,
 				0B1C31A123AB16D300AC1893 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
