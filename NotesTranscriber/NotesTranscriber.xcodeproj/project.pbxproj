@@ -105,8 +105,8 @@
 			isa = PBXGroup;
 			children = (
 				0BDF2D0923AC7C6A00835A92 /* NotesTableViewController.swift */,
-				0BDF2D0D23AC7CDB00835A92 /* TextViewViewController.swift */,
 				0BCBF54723C45C9400F96069 /* NoteTableViewCell.swift */,
+				0BDF2D0D23AC7CDB00835A92 /* TextViewViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";

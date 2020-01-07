@@ -32,5 +32,20 @@ class NoteTableViewCell: UITableViewCell {
     
     private func updateViews() {
         
+        guard let note = self.note else {return}
+        
+        self.noteLabel.text = note.noteText
+        //Date Formatter
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "MM/dd/yyyy HH:mm:ss"
+        let dateFromNote = note.timestamp
+        let createdDate = dateFormatter.string(from: dateFromNote!)
+        dateFormatter.timeZone = NSTimeZone.local
+        self.dateLabel.text = createdDate
+    }
+    
+    
+    @IBAction func shareButtonTapped(_ sender: Any) {
+        
     }
 }
